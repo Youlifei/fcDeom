@@ -6,7 +6,7 @@
         width:1200px;
         height:410px;
         padding-top:5px;
-        background:green;
+        background:#011e03;
     }
 }
 .cen1_lw{
@@ -41,10 +41,205 @@
                     color:#fff;
                     float:left;
                     margin-right:10px;
+                    &:hover{
+                        color:#e2b000;
+                    }
                     
                 }
             }
         }
     }
 }
-
+.cen1_zw{
+    width:700px;
+    height:400px;
+    float:left;
+    margin:0 10px;
+    .foucus1{
+        width:700px;
+        height:300px;
+        overflow:hidden;
+        position:relative;
+        ul{
+            position:relative;
+            li{
+                position:absolute;
+                top:0;
+                left:0;
+            }
+        }
+        ol{
+           position:absolute;
+            bottom:10px;
+            right:5px;
+            li{ 
+                color:green; 
+                width:26px;
+                height:26px;
+                font-size:16px;
+                line-height:26px;
+                text-align:center;
+                margin:2px 2px;
+                float:left; 
+                border-radius: 50%; 
+            }
+        }
+    }
+}
+ol li.current{
+    background:#011e03;
+}
+.foucus2{
+    width:700px;
+    height:100px;
+    overflow:hidden;
+   
+    ul{
+        
+        
+        li{
+            float:left;
+            display:inline;
+            margin-right:3px;
+          
+        }
+    }
+}
+.cen1_rw{
+    width:255px;
+    height:400px;
+    float:right;
+    background:#012701;
+}
+.cen1_rw {
+  width: 255px;
+  height: 400px;
+  float: right;
+  background: #012701;
+  .tou6{
+    width:255px;
+    height:85px;
+    background:#011e03;
+  }
+  .neww1{
+    width:225px;
+    height:30px;
+    padding:5px 15px 0 15px;
+    line-height:30px;
+    color:#fff;
+    border-bottom:1px solid #013601;
+    h3{
+        font-size:14px;
+        span{
+            font-weight: bolder;
+            float:left;
+        }
+        a{
+            float:right;
+        }
+    }
+  }
+  .fas{
+      width:225px;
+      margin-top:1px;
+      padding:10px 15px;
+      li{
+          a{
+              font-size:14px;
+              color:#fff;
+          }
+      }
+  }
+  .fgsw{
+     a{
+         width:125px;
+         height:95px;
+         float:left;
+         margin:20px 2px 0 0;
+         background:#012701;
+         text-align:center;
+        img{
+            
+        }
+         span{
+             font-size:14px;
+             color:#fff;
+         }
+         
+     }
+  }
+}
+.clear_fix{
+    min-height:900px;
+    background:#011e03;
+    .product{
+        height:40px;
+        h4{
+            float:left;
+            height:35px;
+            line-height:35px;
+            margin-top:5px;
+            color:#ebe3d7;
+            text-indent:30px;
+            font-size:20px;
+        }
+        span{
+            height:30px;
+            margin-top:10px;
+            line-height:30px;
+            color:#fff;
+            font-size:14px;
+            padding-left:10px;
+            float:left;
+        }
+        
+    }
+    .produ{
+       
+        li{
+             width:223px;
+             height:338px;
+             margin:8px;
+             background:#dfdfdf;
+             float:left;
+             .pro{
+                    width:223px;
+                    height:223px;
+                    overflow:hidden;
+                 img{
+                     width:100%;
+                     height:100%;
+                 }
+             }
+             .p_con{
+                 .p_cco{
+                     width:100%;
+                     height:55px;
+                     line-height:55px;
+                     text-align:center;
+                     color:#333;
+                     font-size:14px;
+                     font-weight:bolder;
+                 }
+                 .a_con{
+                     width:100%;
+                     height:55px;      
+                     .p_con1{
+                     span{
+                         width:160px;
+                         height:24px;
+                         float:left;
+                         height:24px;
+                         line-height:24px;
+                         font-size:14px;
+                         overflow:hidden;
+                     }
+                
+                 }     
+                 }
+           
+             }
+        }
+    }
+    
+}
