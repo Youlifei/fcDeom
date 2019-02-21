@@ -1,0 +1,146 @@
+// this is power by yangphp@kunming.cn yangphp extends jquery lib
+//only action not style
+
+function goscroll(obj){
+			//recevi parms
+			this.mainid=obj.mainid;
+			this.scrollid = obj.scrollid;
+			this.textid = obj.textid;
+			this.posid = obj.posid;
+			this.previd = obj.previd;
+			this.nextid = obj.nextid;
+			this.type = (obj.type==null)?'scroll':obj.type;
+			this.sleeptime = obj.sleeptime;
+			
+			this.widthpic = $("#"+this.mainid).innerWidth();
+			this.piccount = $("#"+this.scrollid).find("li").length;
+			this.titleint=0;
+
+			var that = this;
+			//count max width
+			$("#"+this.scrollid).css("width",this.widthpic*this.piccount);
+			//set img size
+			$("#"+this.scrollid).find('img').css('width',this.widthpic+'px');
+			//time intval init
+			this.timehd = window.setInterval(function(){
+				that.scroll(1);
+			},this.sleeptime);
+			//hover to stop
+			$("#"+this.mainid).hover(function(){
+				window.clearInterval(that.timehd);
+			},function(){
+				that.timehd = window.setInterval(function(){
+					that.scroll(1);
+				},that.sleeptime);
+			});	
+			//click position button to display 
+			$("#"+this.posid).find('a').hover(function(){
+				
+				var nowinx = $("#"+that.posid).find('a').index(this);
+				window.clearInterval(that.timehd);
+				if(nowinx > that.titleint){//说明正向滚动
+					
+					that.scroll(nowinx-that.titleint);
+				}else if(nowinx == that.titleint){
+					return false;
+				}else{//逆向滚动，传递的是负数
+				
+					var i = nowinx-that.titleint;
+					that.scroll(i);
+				}
+				
+			},function(){});
+			//bind prev and next button
+			$("#"+this.previd).click(function(){
+											  that.scroll(-1);
+											  });
+			$("#"+this.nextid).click(function(){
+											  that.scroll(1);
+			});
+			
+			this.scroll = function(i){
+
+				var re = /px/g;that.titleint += i;
+				var newint = 0-that.widthpic*that.titleint;
+			   //后面已经没有图片了，跳到第一张，
+				if(newint <= -that.widthpic*that.piccount){
+					that.titleint = 0;
+					newint = 0;
+				}else if(newint == that.widthpic){//前面已经没有图片了，不再跳
+					that.titleint = 0;
+					return false;
+				}
+				//下在的是正常滚动
+				
+			  // $("#"+that.scrollid).animate({marginLeft:newint+'px',opacity:'fadeIn'},1200);//滚动体
+			   if(this.type == 'scroll'){
+				$("#"+that.scrollid).animate({marginLeft:newint+'px',opacity:'fadeIn'},1200);//滚动体
+			   }
+			   if(this.type == 'show'){
+					$("#"+that.scrollid).find('li').fadeOut(500);
+				
+					//$("#"+that.scrollid).find('li').eq(that.titleint).css('opacity',0);
+					$("#"+that.scrollid).find('li').eq(that.titleint).fadeIn(1000);//({ opacity: 'fadeIn' }, 900)
+					//$("#"+that.scrollid).find('li').eq(that.titleint).show(1200);
+			   }			   
+			   $("#"+that.textid).find("li").hide();//文本标签全隐藏
+				
+			   $("#"+that.textid).find("li").eq(that.titleint).show();//显示当前文本标签
+			   $("#"+that.posid).find("li").removeClass('cur');
+			   $("#"+that.posid).find("li").eq(that.titleint).addClass('cur');			
+			};
+}
+
+//@yangphp 静态滚动，不带初始化触发
+function staticroll(obj)
+{
+	//计算框内li的个数，累加得到框体总长度
+	this.rollid = obj.rollid;
+	this.mainid = obj.mainid;
+	this.appendpx = obj.appendpx;
+	this.previd = obj.previd;
+	this.nextid = obj.nextid;
+	this.margin = 0;
+	this.page   = 1;
+	var count = $("#"+this.rollid).find("li").length;
+	var length = $("#"+this.rollid).find("li").eq(0).innerWidth();
+	this.leng = $("#"+this.mainid).innerWidth();
+	this.totallength = count*length+this.appendpx*count;
+	$("#"+this.rollid).css('width',this.totallength+'px');
+	this.totalpage = Math.ceil(this.totallength/this.leng);
+	var that = this;
+	//bind prev and next button
+	$("#"+this.previd).click(function(){
+					if(that.page > 1){that.page--;that.go(that.page);}
+					
+				});
+	$("#"+this.nextid).click(function(){
+					that.page++;
+					that.go(that.page);
+				});	
+	this.go = function(i){
+		//计算当前要margin的数值
+		if(i<=0){i=1;that.page=1;}
+		if(i>that.totalpage){i=1;that.page=1;}
+		var newint = -(i-1)*that.leng;
+		$("#"+that.rollid).animate({marginLeft:newint+'px',opacity:'fadeIn'},1200);
+	}
+	
+	
+}
+//处理切换@yangphp
+function tabswitch(){
+	$(".tabswitch").each(function(){
+		$(this).hover(function(){
+			$(this).parent().siblings().removeClass('cur');
+			$(this).parent().addClass('cur');
+			var id = $(this).parent().attr('id');
+			var classn = $("#"+id+"_content").attr('class');
+			$("."+classn).hide();
+			$("#"+id+"_content").show();
+		},function(){
+			return false;
+		});
+	
+	});
+}
