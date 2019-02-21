@@ -1,0 +1,50 @@
+@charset "utf-8";
+#banner{
+    height:415px;
+    background:#011e03;
+    .banner{
+        width:1200px;
+        height:410px;
+        padding-top:5px;
+        background:green;
+    }
+}
+.cen1_lw{
+    width:225px;
+   height:400px;
+   float:left;
+    background:#012701;
+    .ilistmw{
+        width:225px;
+        height:79px;
+        overflow:hidden;
+        border-bottom:1px solid #fff;
+        h3{
+            width:175px;
+            height:25px;
+            padding:2px 30px 0 20px;
+            font-size:14px;
+            color:#fff;
+            span{
+                
+            }
+        }
+        ul{
+            li{
+                height:22px;
+                line-height:22px;
+                display:inline-block;
+                a{
+                    height:79px;
+                    overflow:hidden;
+                    font-size:13px;
+                    color:#fff;
+                    float:left;
+                    margin-right:10px;
+                    
+                }
+            }
+        }
+    }
+}
+
