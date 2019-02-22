@@ -71,6 +71,7 @@
   right: 5px;
 }
 .cen1_zw .foucus1 ol li {
+  cursor: default;
   color: green;
   width: 26px;
   height: 26px;
@@ -88,13 +89,31 @@ ol li.current {
 
 .foucus2 {
   width: 700px;
-  height: 100px;
+  height: 95px;
   overflow: hidden;
+  position: relative;
+}
+.foucus2 ul {
+  width: 700px;
+  height: 100px;
 }
 .foucus2 ul li {
+  width: 230px;
+  height: 95px;
   float: left;
   display: inline;
   margin-right: 3px;
+  position: relative;
+}
+.foucus2 ul li p {
+  position: absolute;
+  width: 230px;
+  height: 30px;
+  bottom: -30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background: rgba(1, 30, 3, 0.5);
 }
 
 .cen1_rw {
@@ -140,6 +159,9 @@ ol li.current {
 }
 .cen1_rw .fas li a {
   font-size: 14px;
+  color: #AFAFAF;
+}
+.cen1_rw .fas li a:hover {
   color: #fff;
 }
 .cen1_rw .fgsw a {

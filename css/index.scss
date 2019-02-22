@@ -73,6 +73,7 @@
             bottom:10px;
             right:5px;
             li{ 
+                cursor:default;
                 color:green; 
                 width:26px;
                 height:26px;
@@ -81,29 +82,45 @@
                 text-align:center;
                 margin:2px 2px;
                 float:left; 
-                border-radius: 50%; 
+                border-radius: 50%;
+                 
             }
         }
     }
 }
 ol li.current{
+    
     background:#011e03;
 }
 .foucus2{
     width:700px;
-    height:100px;
+    height:95px;
     overflow:hidden;
-   
+   position:relative;
     ul{
-        
-        
+        width:700px;
+         height:100px;
         li{
+            width:230px;
+            height:95px;
             float:left;
             display:inline;
             margin-right:3px;
-          
+            position:relative;
+            p{
+                position:absolute;
+                width:230px;
+                height:30px;
+                
+                bottom:-30px;
+                line-height:30px;
+                text-align:center;
+                color:#fff;
+                background:rgba(1,30,3,0.5);
+            }
         }
     }
+   
 }
 .cen1_rw{
     width:255px;
@@ -146,7 +163,10 @@ ol li.current{
       li{
           a{
               font-size:14px;
-              color:#fff;
+              color:#AFAFAF;
+              &:hover{
+                  color:#fff;
+              }
           }
       }
   }
