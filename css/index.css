@@ -14,6 +14,7 @@
   height: 400px;
   float: left;
   background: #012701;
+  overflow: hidden;
 }
 .cen1_lw .ilistmw {
   width: 225px;

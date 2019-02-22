@@ -5,7 +5,7 @@ $(".nav a").mouseenter(function(){
 })
 //手风琴
 $(".ilistmw").mouseover(function(){
-	$(this).css({"height":135,"background":"#065706","border":0}).siblings(last).css("height",61)
+	$(this).css({"height":135,"background":"#065706","border":0}).siblings(".slast").css("height",61)
 }).mouseout(function(){
 	$(this).css({"height":79,"background":"#012701","border-bottom":"solid 1px #fff"}).siblings().css("height",79)
 })
@@ -46,10 +46,9 @@ $(".foucus2 ul li").mouseout(function(){
 	
 })
 
-//所有图片
-//var $list = $(".produ li");
+/*
+ 	//所有图片
 var listCon ="";
-//$.each($list,function(index,ele)
 for(var i = 0 ; i < 6 ; i++){
 	listCon += `<li>
 					<a href="#" class="pro"><img src="images/1.jpg" alt="" /></a>
@@ -66,14 +65,41 @@ for(var i = 0 ; i < 6 ; i++){
 						</div>
 						
 					</div>
-				</li>
-	`
+				</li>`
 }
-	
-	/*var imag = $(this).css("document.createElement",`<img src="images/${index+1}.jpg" alt="" />`);
-	$(this).css("appendChild","imag");
-})*/
-$(".produ").html(listCon)
+$(".produ").html(listCon)*/
 
-
+window.onload = function(){
+	//使用ajax请求index.json中的数据
+	var deff = $.ajax({
+		type:"get",
+		url:"index.json",
+		async:true
+	});
+	deff.done(function(json){
+		var title = "";//内容
+		for(var i = 0;i < json.list.length;i++){
+			//拼接类型名称
+			var pro = json.list[i];
+			title +=`	<li>
+							<a href="#" class="pro"><img src="images/${pro.src}" alt="" /></a>
+							<div class="p_con">
+								<a href="#" class="p_cco">${pro.name}</a>
+								<div class="a_con">
+									<div class="p_con1">
+										<span>【货号】:${pro.sso}</span>
+										<span>【结缘价】:￥${pro.price}元</span>
+									</div>
+									<div class="p_con2">
+										<a href="#" class="cc_con"><sapn></sapn></a>
+									</div>
+								</div>
+									
+								</div>
+							</li>
+							`
+		}
+		$(".produ").html(title);
+	})
+}
 
