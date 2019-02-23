@@ -1,8 +1,34 @@
-$(".nav a").mouseenter(function(){
-	$(this).css("color","#e2b000") 
+//导航
+$("#list a").mouseenter(function(){
+	$(this).css("color","#e2b000","background","#fff") 
 }).mouseout(function(){
-	$(this).css("color","#fff")
+	$(this).css("color","#fff","background","#e2b000")
 })
+
+/*//  二级菜单    调用函数
+window.onload = function(){
+	new ListMenu().init();
+
+function ListMenu(){
+	$(this.list) = list.children;//一级菜单
+	$(this).init = function(){
+		for(let i = 0;i < $(this.list).length ; i++){
+			$(this.list)[i].onmouseenter = function(){
+				$(this).show(this.list[i].children[0]);
+			}.bind(this)
+			$(this.list)[i].onmouseleave = function(){
+				$(this).hide(this.list[i].children[0]);
+			}.bind(this)
+		}
+	}
+	$(this).show = function(obj){
+		obj.style.display = "block";
+	}
+	$(this).hide = function(obj){
+		obj.style.display = "none";
+	}
+}
+}*/
 //手风琴
 $(".ilistmw").mouseover(function(){
 	$(this).css({"height":135,"background":"#065706","border":0}).siblings(".slast").css("height",61)
@@ -78,11 +104,12 @@ window.onload = function(){
 	});
 	deff.done(function(json){
 		var title = "";//内容
+		for(var attr in json){
 		for(var i = 0;i < json.list.length;i++){
 			//拼接类型名称
 			var pro = json.list[i];
 			title +=`	<li>
-							<a href="#" class="pro"><img src="images/${pro.src}" alt="" /></a>
+							<a href="page.html?cname=${attr}&pid=${pro.id}" class="pro"><img src="images/${pro.src}" alt="" /></a>
 							<div class="p_con">
 								<a href="#" class="p_cco">${pro.name}</a>
 								<div class="a_con">
@@ -91,7 +118,7 @@ window.onload = function(){
 										<span>【结缘价】:￥${pro.price}元</span>
 									</div>
 									<div class="p_con2">
-										<a href="#" class="cc_con"><sapn></sapn></a>
+										<a href="#" class="cc_con">查看<br>详情</a>
 									</div>
 								</div>
 									
@@ -100,6 +127,8 @@ window.onload = function(){
 							`
 		}
 		$(".produ").html(title);
+	}
 	})
 }
+
 

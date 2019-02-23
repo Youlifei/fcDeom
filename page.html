@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		
+		<style>
+			#shopbtn{
+				font-size: 30px;
+				padding: 5px 10px;
+				border: 1px solid red;
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+			p,button{
+				margin-left:80px;
+			}
+			img{
+				margin-left:40px ;
+			} 
+		</style>
+		<script src="js/cookie.js"></script>
+	</head>
+	<body>
+		
+		<div class="shopinfo">
+			<!--<img src="images/1.jpg" alt="" />
+			<p>"糯冰种飘翠圆条手镯"</p>
+			<p>【货号】:jd123456s</p>
+			<p>【结缘价】:￥2880000元</p>
+			<button>购买</button>-->
+		</div>
+	</body>
+</html>
+<script>
+	window.onload = function(){
+		//获取路径信息
+		var str = location.href;//http://http://127.0.0.1/fcDeom/page.html?cname=list&pid=shop01
+		
+		str = str.split("?")[1];//cname=list&pid=shop01
+		var arr = str.split("&");// ["cname=list", "pid=shop01"]
+		var cname = arr[0].split("=")[1];//list
+		//console.log(cname);
+		var pid = arr[1].split("=")[1];//shop01  id
+		//console.log(pid)
+		//请求服务器数据根据cname和pid的值确定要显示的某个商品
+		$.ajax({
+			type:"get",
+			url:"index.json",
+			async:true,
+			success : function(json){
+				console.log(json.list )
+				var arr = json.list;
+				var str = "";
+				for(var i = 0; i < arr.length ; i++){
+					if(pid == arr[i].id){
+						str +=`<img src="images/${arr[i].src}" alt="" />
+								<p>${arr[i].name}</p>
+								<p>【货号】:${arr[i].sso}</p>
+								<p>结缘价】:￥${arr[i].price}元</p>
+								<button>购买</button>`;
+								break;
+					}
+				}
+				$(".shopinfo").html( str );
+			}
+			
+		});
+	}
+</script>

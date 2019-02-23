@@ -51,37 +51,48 @@
 .daohang .logo h1{
 	width:240px;
 	height:79px;
-	margin-top:15px;
+	margin-top:10px;
 	float:left;
+	
 }
 .daohang .erwie{
 	float:left;
 }
 .daohang .you{
 	width:780px;
-	height:40px;
-	margin:20px 0 10px;
+	height:20px;
+	margin:0 0 20px;
 	background:#011e03;
 	float:right;
 }
-.daohang .you ul li{
+.daohang .you ul li a{
 	float:left;
 	color:#cccccc;
-	padding-left:52px;
+	padding-left:10px;
 	height:40px;
 	margin-left:10px;
 	font-size:14px;
+}
+.daohang .you ul li a:hover{
+	color:#FFFDEF;
+}
+.daohang .you ul li p{
+	float:left;
+}
+.daohang .you ul li p i{
+	font-size:40px;
 }
 .daohang .fei{
 	width:750px;
 	height:35px;
 	float:right;
+	padding-top:20px;
 	color:#ffffff;
 	line-height:35px;
 }
 .daohang .fei p{
 	float:left;
-	border-right:1px solid #fff;
+	padding-right:10px;
 	font-size:12px;
 }
 .daohang .fei .qx{
@@ -113,14 +124,27 @@
 	height:40px;
 	background:#011e03;
 }
-.nav{
+#list{
 	height:40px;
 	background:#011e03;
 }
-.nav li{
+#list ul li{
 	float:left;
+	position:relative;
 }
-.nav a{
+#list ul ul{
+	position:absolute;
+	background:rgba(36,168,93,1);
+	left:0;
+	top:40px;
+	display:none;
+	z-index:20;
+}
+#list ul ul li{
+	border-bottom:1px solid #fff;
+}
+
+#list a{
 	padding:0 16px 0 11px;
 	height:40px;
 	text-align:center;
