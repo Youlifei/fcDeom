@@ -33,6 +33,7 @@
 	line-height:40px;
 	float:left;
 }
+
 .ding .tu1{
 	width:400px;
 	height:51px;
@@ -44,6 +45,35 @@
 	border-right:1px solid #ffffff;
 	float:right;
 	margin-top:6px;
+}
+.ding .tu6{
+	width:400px;
+	height:50px;
+	float:right;
+	line-height:50px;
+	text-align:center;
+}
+.ding .tu6 p{
+	
+	float:left;
+	margin:0 10px;
+}
+.ding .tu6 p i{
+	float:left;
+	font-size:16px;
+	color:#fff;
+}
+.ding .tu6 p span{
+	margin-left:5px;
+	float:left;
+	font-size:16px;
+	
+}
+.ding .tu6 p span a{
+	color:#fff;
+}
+.ding .tu6 p span a:hover{
+	color:#708090;
 }
 .daohang{
 	height:104px;

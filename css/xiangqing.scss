@@ -1,0 +1,121 @@
+@charset "utf-8";
+.count{
+    width:100%;
+    min-height:100px;
+    background:#011E03;
+}
+.pmenu_list{
+    height:84px;
+    background:#012701;
+    margin-top:15px;
+    padding-bottom:10x;
+    overflow:hidden;
+    font-family:"微软雅黑";
+    ul{
+       float:left;
+       margin:0 17px;
+       li{
+           float:left;
+           a{
+               float:left;
+               color:#999999;
+               font-size:14px;
+               &:hover{
+                   color:#fff;
+                   text-decoration:underline;
+               }
+           }
+           span{
+               float:left;
+               padding:0 17px;
+               margin-top:-1px;
+               color:#999999;
+               font-size:14px;
+           }
+       }
+        
+    }
+}
+.nowposition{
+    width:1170px;
+    height:40px;
+    line-height:40px;
+    margin-left:30px;
+    margin:0 auto;
+    a{
+        color:#fff;
+        font-size:14px;
+        float:left;
+    }
+    span{
+        font-size:14px;
+        color:#fff;
+        float:left;
+    }
+}
+//大图
+.atcw{
+    height:780px;
+    background:#fff;
+    .actimgs{
+        width:870px;
+        height:750px;
+        margin:15px;
+        float:left;
+        ul{
+            width:750px;
+            height:750px;
+            float:left;
+            overflow:hidden;
+            li{
+                width:750px;
+                height:750px;
+                position:absolute;
+                display: none;
+                img{
+                    width:750px;
+                    height:750px;
+                }
+            }
+            .coon{
+                display: block;
+            }
+            .big{
+                width:300px;
+                height:300px;
+                background:pink;
+                position:absolute;
+                z-index: 10;
+                display:none;
+            }
+            
+        }
+        ol{
+            width:110px;
+            height:750px;
+            float:left;
+            margin-left:10px;
+            li{
+                width:100px;
+                height:100px;
+                margin:5px; 
+                position:relative;
+                overflow:hidden;
+                img{
+                  width:100px;
+                  height:100px; 
+                  &:hover{
+                      width:110px;
+                      height:110px;
+                      position:absolute;
+                      top:-5px;
+                      left:-5px;
+                  } 
+                }
+            }
+            .active{
+                border:2px solid red;
+            }
+        }
+    }
+}
