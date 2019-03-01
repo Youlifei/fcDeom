@@ -4,7 +4,7 @@ body {
   background: #002100;
 }
 
-.zhu_zc {
+.zhu_dl {
   width: 500px;
   height: 600px;
   margin: 0 auto;
@@ -12,7 +12,7 @@ body {
   background: #708090;
   border-radius: 50px;
 }
-.zhu_zc h2 {
+.zhu_dl h2 {
   width: 400px;
   height: 60px;
   line-height: 60px;
@@ -21,16 +21,15 @@ body {
   font-size: 28px;
   text-align: center;
 }
-.zhu_zc .zhu_z {
+.zhu_dl .zhu_d {
   width: 250px;
   height: 20px;
   margin: 0 auto;
   margin: 20px 0;
 }
-.zhu_zc #btn {
+.zhu_dl .btn2 {
   align-content: center;
-  margin: 30px 250px;
-  color: blue;
+  margin: 30px 230px;
 }
 
-/*# sourceMappingURL=zhuce.css.map */
+/*# sourceMappingURL=denglu.css.map */

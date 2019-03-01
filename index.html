@@ -7,8 +7,6 @@
 		<link rel="stylesheet" href="css/inde.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="iconfont/iconfont.css" />
-		
-		
 	</head>
 	<body>
 		<!--固定客服框-->
@@ -46,11 +44,11 @@
 						</p>
 						<p>
 							<i class="iconfont icon-ren1"></i>
-							<span><a href="#">登录</a></span>
+							<span><a href="denglu.html">登录</a></span>
 						</p>
 						<p>
 							<i class="iconfont icon-qianming"></i>
-							<span><a href="#">注册</a></span>
+							<span><a href="zhuce.html">注册</a></span>
 						</p>
 					</div>
 					
@@ -63,46 +61,7 @@
 						<div class="erwie">
 							<img src="images/app_vrcode_logo.png" alt="" />
 						</div>
-						<div class="you">
-							<ul>
-								
-								<li><a href="#">
-									<p><i class="iconfont icon-solid-time"></i></p>
-									<p><span>真省好多<br>良心品牌</span></p>
-								</a>
-								</li>
-								<li>
-									<a href="#">
-									<p><i class="iconfont icon-qianbao2"></i></p>
-									<p><span>源头供货<br>厂价直销</span></p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<p><i  class="iconfont icon-qianbao1"></i></p>
-									<p><span>100%天然A货<br>假一赔十</span></p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<p><i class="iconfont icon-gouwuche1"></i></p>
-									<p><span>实物拍摄<br>视频展示</span></p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<p><i class="iconfont icon-qianbao1"></i></p>
-									<p><span>顺丰保价<br>安全送达</span></p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<p><i class="iconfont icon-gouwuche1"></i></p>
-									<p><span>省钱省心<br>七天自由退货</span></p>
-									</a>
-								</li>
-							</ul>
-						</div>
+						
 						<div class="fei">
 							<p>电话:400-629-1314</p>
 							<p class="qx">批发/货源咨询请加微信:jaadee006</p>
@@ -373,21 +332,25 @@
 			<div class="proo clear_fix">
 				<ul class="produ">
 					<!--<li>
-						<a href="#" class="pro"><img src="images/1.jpg" alt="" /></a>
-						<div class="p_con">
-							<a href="#" class="p_cco">糯冰种漂翠圆条手镯</a>
-							<div class="a_con">
-								<div class="p_con1">
-									<span>【货号】:jd157272</span>
-									<span>【结缘价】:￥28800元</span>
+							<a href="page.html?cname=${attr}&pid=${pro.id}" class="pro"><img src="images/${pro.src}" alt="" /></a>
+							<div class="p_con">
+								<a href="#" class="p_cco">${pro.name}</a>
+								<div class="a_con">
+									<div class="p_con1">
+										<span>【货号】:${pro.sso}</span>
+										<span>【结缘价】:￥${pro.price}元</span>
+									</div>
+									<div class = "com">
+										<i class="iconfont icon-gouwucheman"></i>
+										<a href="xiangqing.html"><span>加入购物车</span></a>
+									</div>
+									<div class="p_con2">
+										<a href="xiangqing.html?cname=${attr}&pid=${pro.id}" class="cc_con">查看详情>></a>
+									</div>
 								</div>
-								<div class="p_con2">
-										<a href="#" class="cc_con">查看<br>详情</a>
+									
 								</div>
-							</div>
-							
-						</div>
-					</li>-->
+							</li>-->
 				</ul>
 			</div>	
 		</div>
@@ -434,22 +397,26 @@
 				<!--图片大全-->
 			<div class="proo clear_fix">
 					<ul class="produ">
-					<!--	<li>
-						<a href="#" class="pro"><img src="images/1.jpg" alt="" /></a>
-						<div class="p_con">
-							<a href="#" class="p_cco">糯冰种漂翠圆条手镯</a>
-							<div class="a_con">
-								<div class="p_con1">
-									<span>【货号】:jd157272</span>
-									<span>【结缘价】:￥28800元</span>
+						<!--<li>
+							<a href="page.html?cname=${attr}&pid=${pro.id}" class="pro"><img src="images/${pro.src}" alt="" /></a>
+							<div class="p_con">
+								<a href="#" class="p_cco">${pro.name}</a>
+								<div class="a_con">
+									<div class="p_con1">
+										<span>【货号】:${pro.sso}</span>
+										<span>【结缘价】:￥${pro.price}元</span>
+									</div>
+									<div class = "com">
+										<i class="iconfont icon-gouwucheman"></i>
+										<a href="#"><span>加入购物车</span></a>
+									</div>
+									<div class="p_con2">
+										<a href="xiangqing.html?cname=${attr}&pid=${pro.id}" class="cc_con">查看详情>></a>
+									</div>
 								</div>
-								<div class="p_con2">
-										<a href="#" class="cc_con">查看<br>详情</a>
+									
 								</div>
-							</div>
-							
-						</div>
-					</li>-->	
+							</li>-->
 					</ul>
 				</div>
 			</div>
@@ -748,7 +715,9 @@
 			</li>
 		</ul>
 	</div>
-	
+	<div class="htu">
+		<img src="images/d465ce2ce70bb8f97b11e75b58093139.jpg" alt="" />
+	</div>
 	<!--底部导航-->
 	<div class="count">
 		<ul class="footnavw">
@@ -780,7 +749,7 @@
 			<i class = "iconfont icon-weixin1"></i>
 			<span>分享好友</span>
 		</a>
-		<a href="#">
+		<a href="xiangqing.html">
 			<i class = "iconfont icon-gouwuchekong"></i>
 			<span>加入购物车</span>
 		</a>
@@ -790,3 +759,4 @@
 </html>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/cookie.js"></script>

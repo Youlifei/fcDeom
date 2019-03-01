@@ -395,25 +395,28 @@ ol li.current {
   font-size: 14px;
   overflow: hidden;
 }
+.clear_fix .cla .proo .produ li .p_con .a_con .com {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #0077AA;
+}
+.clear_fix .cla .proo .produ li .p_con .a_con .com button {
+  float: left;
+  font-size: 14px;
+}
 .clear_fix .cla .proo .produ li .p_con .a_con .p_con2 {
-  width: 40px;
-  height: 40px;
   position: absolute;
   right: 10px;
-  top: 6px;
-  border: 1px solid #011E03;
-  background: #F5F2F0;
+  bottom: 0px;
   text-align: center;
-  font-size: 14px;
-  border-radius: 5px;
 }
 .clear_fix .cla .proo .produ li .p_con .a_con .p_con2 a {
   color: #000;
+  font-size: 10px;
 }
 .clear_fix .cla .proo .produ li .p_con .a_con .p_con2:hover {
-  color: #fff;
-  background: #B6B6B6;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .listtitleo {
@@ -711,7 +714,6 @@ ol li.current {
   margin: 0 auto;
   width: 400px;
   height: 50px;
-  margin: 0 auto;
   margin-top: 10px;
 }
 .count .footnavw li {
@@ -735,10 +737,22 @@ ol li.current {
   height: 75px;
 }
 .count_2 .footer_2 {
-  width: 1152px;
+  width: 1200px;
   height: 75px;
+  margin: 0 auto;
 }
 .count_2 .footer_2 a {
+  margin: 0 auto;
+}
+
+.htu {
+  height: 200px;
+  overflow: hidden;
+  margin: 20px 13px;
+}
+.htu img {
+  width: 1200px;
+  height: 200px;
   margin: 0 auto;
 }
 

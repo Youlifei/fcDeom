@@ -144,17 +144,20 @@ window.onload = function(){
 		for(var i = 0;i < json.list.length;i++){
 			//拼接类型名称
 			var pro = json.list[i];
-			title +=`	<li>
+			title +=`<li>
 							<a href="page.html?cname=${attr}&pid=${pro.id}" class="pro"><img src="images/${pro.src}" alt="" /></a>
 							<div class="p_con">
-								<a href="#" class="p_cco">${pro.name}</a>
+								<a href="xiangqing.html" class="p_cco">${pro.name}</a>
 								<div class="a_con">
 									<div class="p_con1">
 										<span>【货号】:${pro.sso}</span>
 										<span>【结缘价】:￥${pro.price}元</span>
 									</div>
+									<div class = "com">
+										<button data-id="${pro.id}" data-name="${pro.name}" data-sic="${pro.src}" data-sso="${pro.sso}" data-price="${pro.price}">加入购物车</button>
+									</div>
 									<div class="p_con2">
-										<a href="page.html?cname=${attr}&pid=${pro.id}" class="cc_con">查看<br>详情</a>
+										<a href="xiangqing.html?cname=${attr}&pid=${pro.id}" class="cc_con">查看详情>></a>
 									</div>
 								</div>
 									
@@ -165,7 +168,55 @@ window.onload = function(){
 		$(".produ").html(title);
 	}
 	})
+	
+	//添加购物车
+	var arr = [];//用于存放多个商品
+	$(".produ").on("click","button",function(){//委托
+		//获取当前购买的商品信息存入到cookie中
+		var json = {};//用来存放一个商品信息
+			json = {
+				//使用data方式获得data-*的自定义属性值
+				id:$(this).data("id"),
+				name:$(this).data("name"),
+				src:$(this).data("src"),
+				sso:$(this).data("sso"),
+				price:$(this).data("price"),
+				count:1//累加重复商品数量
+			}
+			var flag = true;//假设值为true时  可以想数组中push一个对象；
+			//先取出cookie中的所有商品 判断当前存入的商品在cookie中是否存在如果存在就将商品的数量+1;
+			//如果不纯在 就将该商品存入到arr数组中
+			var cookieInfo = getCookie("produ");//取出的是一个数组
+			//如果数组中有数据就判断
+			if(cookieInfo.length !=0){
+				//判断当前购买的商品cookieInfo中是否存在
+				for(var i = 0 ; i< cookieInfo.length;i++){
+					if(json.id == cookieInfo[i].id){//说明该json中存入的商品被购买过
+						//将i对应的商品count值+1
+						cookieInfo[i].count++;
+						arr=cookieInfo;//因为最终将arr素组存入到cookie中所以要将cookieInfo中的数据赋值给arr
+						flag = false;
+						break;	
+					}
+				}
+			}
+			if(flag){
+				//将json存入到数组中
+				arr.push(json);
+			}
+			//console.log(arr);
+			//把数组存入到cookie中
+			setCookie("produ",JSON.stringify(arr));
+			if( !confirm("点击确定-继续购买，点击取消-跳转到购物车结算") ){
+				//页面跳转
+				location.href = "xiangqing.html";
+			}
+			
+	})
 }
+
+
+
 //第二个轮播图  无缝轮播图
 $(function(){
 	//设置定时器

@@ -55,55 +55,68 @@
 }
 //大图
 .atcw{
-    height:780px;
-    background:#fff;
+    height:600px;
+    background:#011E03;
+    position:relative;
     .actimgs{
-        width:870px;
-        height:750px;
+        width:700px;
+        height:600px;
         margin:15px;
         float:left;
-        ul{
-            width:750px;
-            height:750px;
+        position:relative;
+        #small{
+            width:420px;
+            height:420px;
             float:left;
             overflow:hidden;
+            position:relative;
             li{
-                width:750px;
-                height:750px;
+                width:420px;
+                height:420px;
                 position:absolute;
                 display: none;
                 img{
-                    width:750px;
-                    height:750px;
+                    width:420px;
+                    height:420px;
                 }
             }
             .coon{
                 display: block;
             }
-            .big{
-                width:300px;
-                height:300px;
-                background:pink;
-                position:absolute;
-                z-index: 10;
-                display:none;
+            &:hover{
+                .big{
+                    display:block;
+                    cursor:move;
+                }
             }
             
         }
+        .big{
+                width:210px;
+                height:210px;
+                background:pink;
+                position:absolute;
+                z-index: 10;
+                opacity:0.4 ;
+                display:none;
+            }
         ol{
-            width:110px;
-            height:750px;
+            width:240px;
+            height:600px;
             float:left;
-            margin-left:10px;
+            margin-left:5px;
             li{
                 width:100px;
                 height:100px;
-                margin:5px; 
+                float:left; 
                 position:relative;
+                margin:2px;
+                border:1px solid #DFDFDF;
                 overflow:hidden;
                 img{
                   width:100px;
-                  height:100px; 
+                  height:100px;
+                  
                   &:hover{
                       width:110px;
                       height:110px;
@@ -113,9 +126,141 @@
                   } 
                 }
             }
-            .active{
-                border:2px solid red;
+            
+        }
+        .img_d{
+            width:490px;
+            height:490px;
+            position:absolute;
+            left:680px;
+            overflow:hidden;
+     
+            img{
+                position:absolute;
+                width:980px;
+                height:980px;
+                display:none; 
+            }
+            .act_ive{
+            display:block;
+         }
+        }
+        
+    }
+    
+}
+
+.actinfo{
+    width:400px;
+    height:550px;
+    float:right;
+    margin:14px 35px 0 0;
+    .shopinfo{
+                width:400px;
+                height:550px;
+                p{
+                     font-size:24px;
+                     color:#fff;
+                }
+                button{
+                        font-size:24px;
+                        color:#000;
+                 }
+                img{
+                     width:400px;
+                     height:400px;
+                 }
+            }
+}
+
+//结算
+.jei{
+    width:300px;
+    height:200px;
+    position:fixed;
+    bottom:0px;
+    right:0;
+    
+    .btna{
+        width:80px;
+        height:80px;
+        border-radius: 40px;
+        background:yellow;
+        position:absolute;
+        right:0;
+        bottom:0;
+        z-index: 100;
+        i{
+            font-size:80px;
+        }
+    }
+    .jsk{
+        width:300px;
+        height:220px;
+        background:blue;
+        text-align:center;
+        padding-top:5px;
+        position:absolute;
+        bottom:-225px;
+        z-index: 40;
+        i{
+            font-size:40px;
+            color:red;
+            border:1px solid #fff;
+            padding:2px;
+        }
+        p{
+             padding-top:60px;
+            font-size:28px;
+            span{
+               
+                color:red;
+                font-size:30px;
             }
         }
     }
+    .fkbz{
+        width:300px;
+        height:40px;
+        font-size:26px;
+        background:yellow;
+        position:absolute;
+        bottom:220px;
+        right:-300px;
+        z-index: 20;
+        i{
+            float:left;
+            font-size:26px;
+        }
+        h2{
+            float:left;
+            font-size:24px;
+        }
+     .btnq{
+         position:absolute;
+         right:0;
+         top:0;
+         border-radius: 5px;
+     }
+    }
 }
+
+
+
+
+
+ .dib{ 
+     height:75px;
+     background:#011E03;
+     border-top:1px solid #AFAFAF;
+    .count_2{
+           height:75px;
+           .footer_2{
+               width:1152px;
+               height:75px;
+                a{
+                    margin:0 auto;
+                } 
+           }
+    }
+    } 

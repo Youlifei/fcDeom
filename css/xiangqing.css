@@ -56,53 +56,63 @@
 }
 
 .atcw {
-  height: 780px;
-  background: #fff;
+  height: 600px;
+  background: #011E03;
+  position: relative;
 }
 .atcw .actimgs {
-  width: 870px;
-  height: 750px;
+  width: 700px;
+  height: 600px;
   margin: 15px;
   float: left;
+  position: relative;
 }
-.atcw .actimgs ul {
-  width: 750px;
-  height: 750px;
+.atcw .actimgs #small {
+  width: 420px;
+  height: 420px;
   float: left;
   overflow: hidden;
+  position: relative;
 }
-.atcw .actimgs ul li {
-  width: 750px;
-  height: 750px;
+.atcw .actimgs #small li {
+  width: 420px;
+  height: 420px;
   position: absolute;
   display: none;
 }
-.atcw .actimgs ul li img {
-  width: 750px;
-  height: 750px;
+.atcw .actimgs #small li img {
+  width: 420px;
+  height: 420px;
 }
-.atcw .actimgs ul .coon {
+.atcw .actimgs #small .coon {
   display: block;
 }
-.atcw .actimgs ul .big {
-  width: 300px;
-  height: 300px;
+.atcw .actimgs #small:hover .big {
+  display: block;
+  cursor: move;
+}
+.atcw .actimgs .big {
+  width: 210px;
+  height: 210px;
   background: pink;
   position: absolute;
   z-index: 10;
+  opacity: 0.4;
   display: none;
 }
 .atcw .actimgs ol {
-  width: 110px;
-  height: 750px;
+  width: 240px;
+  height: 600px;
   float: left;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .atcw .actimgs ol li {
   width: 100px;
   height: 100px;
-  margin: 5px;
+  float: left;
   position: relative;
+  margin: 2px;
+  border: 1px solid #DFDFDF;
   overflow: hidden;
 }
 .atcw .actimgs ol li img {
@@ -116,8 +126,129 @@
   top: -5px;
   left: -5px;
 }
-.atcw .actimgs ol .active {
-  border: 2px solid red;
+.atcw .actimgs .img_d {
+  width: 490px;
+  height: 490px;
+  position: absolute;
+  left: 680px;
+  overflow: hidden;
+}
+.atcw .actimgs .img_d img {
+  position: absolute;
+  width: 980px;
+  height: 980px;
+  display: none;
+}
+.atcw .actimgs .img_d .act_ive {
+  display: block;
+}
+
+.actinfo {
+  width: 400px;
+  height: 550px;
+  float: right;
+  margin: 14px 35px 0 0;
+}
+.actinfo .shopinfo {
+  width: 400px;
+  height: 550px;
+}
+.actinfo .shopinfo p {
+  font-size: 24px;
+  color: #fff;
+}
+.actinfo .shopinfo button {
+  font-size: 24px;
+  color: #000;
+}
+.actinfo .shopinfo img {
+  width: 400px;
+  height: 400px;
+}
+
+.jei {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  bottom: 0px;
+  right: 0;
+}
+.jei .btna {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: yellow;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.jei .btna i {
+  font-size: 80px;
+}
+.jei .jsk {
+  width: 300px;
+  height: 220px;
+  background: blue;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  bottom: -225px;
+  z-index: 40;
+}
+.jei .jsk i {
+  font-size: 40px;
+  color: red;
+  border: 1px solid #fff;
+  padding: 2px;
+}
+.jei .jsk p {
+  padding-top: 60px;
+  font-size: 28px;
+}
+.jei .jsk p span {
+  color: red;
+  font-size: 30px;
+}
+.jei .fkbz {
+  width: 300px;
+  height: 40px;
+  font-size: 26px;
+  background: yellow;
+  position: absolute;
+  bottom: 220px;
+  right: -300px;
+  z-index: 20;
+}
+.jei .fkbz i {
+  float: left;
+  font-size: 26px;
+}
+.jei .fkbz h2 {
+  float: left;
+  font-size: 24px;
+}
+.jei .fkbz .btnq {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+.dib {
+  height: 75px;
+  background: #011E03;
+  border-top: 1px solid #AFAFAF;
+}
+.dib .count_2 {
+  height: 75px;
+}
+.dib .count_2 .footer_2 {
+  width: 1152px;
+  height: 75px;
+}
+.dib .count_2 .footer_2 a {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=xiangqing.css.map */
